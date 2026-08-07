@@ -41,9 +41,9 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    - `answers.md` (from `templates/answers.md`) — narrative to paste in the form.
    - `evidence.md` (from `templates/evidence.md`) — proof sheet: tables of
      clickable JIRA/PR links + status; this is where counts/receipts live.
-6. **Render** with `python3 scripts/md2pdf.py <file.md> <fontpx>` (writes `.html`;
-   then headless Chrome `--print-to-pdf` for `.pdf`). Keep `.md`/`.html`/`.pdf`
-   in sync on every edit.
+6. **Render** with `python3 scripts/md2pdf.py <file.md>` — writes both `.html`
+   and `.pdf` (auto-detects a Chromium-based browser; leaves the HTML with a note
+   if none is found). Keep `.md`/`.html`/`.pdf` in sync on every edit.
 7. **Self-review (iterate).** Run `references/review-checklist.md`: a senior-
    engineer pass (accuracy, no vanity metrics, right altitude) and a manager
    pass (impact-first, map to Strategy/Execution/Leadership, rate honestly —
@@ -53,9 +53,11 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    bullets; pasting markdown shows literal `-`/`**`), and attach the Evidence
    PDF. Never post or submit automatically.
 
-## Companion
-- `checkin-rephrase` — tighten/rewrite goal statements into the form's template
-  (pure text editing, no lookups).
+## Companions
+- `checkin-review` — grade the finished draft as a senior manager (12 weighted
+  factors + calibration verdict) before the user submits.
+- `checkin-rephrase` — tighten/rewrite a goal or any answer, applying the same
+  content rules (pure text editing, no lookups).
 
 ## Guardrails
 - Don't commit generated check-ins or filled config (see `.gitignore`).

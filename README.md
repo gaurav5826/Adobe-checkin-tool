@@ -43,9 +43,14 @@ prerequisites, what it pulls from each, and the query recipes.
    `config/identities-and-sources.md` and fill in your handles, project keys,
    channels, and repos. **This file is gitignored — it never gets committed.**
 2. Skim `config/content-preferences.md` and adjust to taste.
-3. Make sure the skill is discoverable: either run Claude Code from this repo,
-   or symlink the skill into your user skills dir:
-   `ln -s "$PWD/.claude/skills/checkin-helper" ~/.claude/skills/checkin-helper`
+3. Make sure the skills are discoverable: either run Claude Code from this repo,
+   or symlink all three into your user skills dir:
+   ```
+   mkdir -p ~/.claude/skills
+   for s in checkin-helper checkin-rephrase checkin-review; do
+     ln -sfn "$PWD/.claude/skills/$s" ~/.claude/skills/$s
+   done
+   ```
 
 ## Usage (each cycle)
 
