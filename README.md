@@ -23,6 +23,7 @@ scripts/md2pdf.py                         # markdown -> styled HTML -> PDF (head
 config/identities-and-sources.example.md  # copy to identities-and-sources.md and fill in
 config/content-preferences.md             # how you want the writing to read
 references/sources-and-connections.md     # prerequisites + what to pull + concrete query recipes
+references/review-checklist.md            # self-review loop (senior-dev + manager passes) before presenting
 references/performance-principles.md      # generic IC performance framing
 templates/answers.md                      # narrative template
 templates/evidence.md                     # proof-sheet template

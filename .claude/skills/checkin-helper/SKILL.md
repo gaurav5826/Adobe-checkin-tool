@@ -21,10 +21,15 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    missing, tell the user to copy the `.example.md` and fill it — never guess.
 2. **Confirm cycle & window** (e.g. "2026 Mid-year", date range) if not given.
 3. **Gather evidence** from each connected source using the recipes in
-   `references/sources-and-connections.md`:
-   - GitHub (every handle × org), JIRA (resolved/open + bug/critical/security/
-     reopened counts), Slack (ownership/customer/recognition), Outlook (release/
-     recognition), SharePoint, Confluence. Search **all** your GitHub handles.
+   `references/sources-and-connections.md`. First **resolve identities** (don't
+   hardcode). Then:
+   - GitHub — the **multi-pass** fetch (opened / merged-in-window / open-updated /
+     closed-unmerged / reviews-given) for **every** handle × org, incl. any
+     enterprise host via its MCP.
+   - JIRA — resolved/open by theme + counts (bugs, high-priority, security
+     delivered vs. in-progress, reopened).
+   - Slack (ownership/customer/recognition), Outlook (release/recognition, noise
+     filtered), SharePoint, Confluence.
 4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
    - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
@@ -39,10 +44,14 @@ concrete pull queries and `config/content-preferences.md` for how to write.
 6. **Render** with `python3 scripts/md2pdf.py <file.md> <fontpx>` (writes `.html`;
    then headless Chrome `--print-to-pdf` for `.pdf`). Keep `.md`/`.html`/`.pdf`
    in sync on every edit.
-7. **Review, don't submit.** Present drafts. Remind: paste the Answers by copying
-   from the rendered `.html` in a browser (rich copy keeps bold + bullets;
-   pasting markdown shows literal `-`/`**`), and attach the Evidence PDF. Never
-   post or submit automatically.
+7. **Self-review (iterate).** Run `references/review-checklist.md`: a senior-
+   engineer pass (accuracy, no vanity metrics, right altitude) and a manager
+   pass (impact-first, map to Strategy/Execution/Leadership, rate honestly —
+   special vs. routine). Fix wording gaps; flag real-work gaps to the user.
+8. **Present, don't submit.** Show the drafts. Remind: paste the Answers by
+   copying from the rendered `.html` in a browser (rich copy keeps bold +
+   bullets; pasting markdown shows literal `-`/`**`), and attach the Evidence
+   PDF. Never post or submit automatically.
 
 ## Companion
 - `checkin-rephrase` — tighten/rewrite goal statements into the form's template
