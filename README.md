@@ -17,9 +17,11 @@ for you to review and paste yourself.
 ## What's in here
 
 ```
-.claude/skills/checkin-helper/SKILL.md    # main workflow: gather -> draft Answers + Evidence
-.claude/skills/checkin-rephrase/SKILL.md  # companion: tighten goal statements (no lookups)
-.claude/skills/checkin-review/SKILL.md    # senior-manager review: score 12 weighted factors, verdict
+.claude/skills/checkin-helper/SKILL.md      # main workflow: gather -> draft Answers + Evidence
+.claude/skills/checkin-review/SKILL.md      # senior-manager review: score 12 weighted factors, verdict
+.claude/skills/checkin-rephrase/SKILL.md    # tighten a goal or any answer (no lookups)
+.claude/skills/checkin-recognition/SKILL.md # collect kudos/praise into a Recognition block
+.claude/skills/checkin-convo-prep/SKILL.md  # talking points + likely Q&A for the check-in conversation
 scripts/md2pdf.py                         # markdown -> styled HTML -> PDF (headless Chrome; tables + links)
 config/identities-and-sources.example.md  # copy to identities-and-sources.md and fill in
 config/form-templates.example.md          # copy to form-templates.md; paste the literal form wording
@@ -50,7 +52,7 @@ prerequisites, what it pulls from each, and the query recipes.
    or symlink all three into your user skills dir:
    ```
    mkdir -p ~/.claude/skills
-   for s in checkin-helper checkin-rephrase checkin-review; do
+   for s in checkin-helper checkin-review checkin-rephrase checkin-recognition checkin-convo-prep; do
      ln -sfn "$PWD/.claude/skills/$s" ~/.claude/skills/$s
    done
    ```
@@ -62,7 +64,13 @@ In Claude Code, the flow is **draft → grade → submit**:
   into an output folder.
 - `/checkin-review` — grade the draft as a senior manager (12 weighted factors,
   1-10, with a calibration verdict) before you submit.
-- `/checkin-rephrase` — tighten individual goal statements if needed.
+- `/checkin-rephrase` — tighten a goal or any answer if needed.
+
+Supporting skills:
+- `/checkin-recognition` — collect kudos/praise from Slack, email, and PR comments
+  into a Recognition block for the Evidence.
+- `/checkin-convo-prep` — talking points + likely Q&A to prep for the check-in
+  conversation with your manager.
 
 Nothing is submitted automatically; you review and paste into the form yourself.
 

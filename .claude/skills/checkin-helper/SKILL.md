@@ -68,6 +68,9 @@ concrete pull queries and `config/content-preferences.md` for how to write.
   factors + calibration verdict) before the user submits.
 - `checkin-rephrase` — tighten/rewrite a goal or any answer, applying the same
   content rules (pure text editing, no lookups).
+- `checkin-recognition` — collect kudos/praise into a Recognition block for the
+  Evidence sheet.
+- `checkin-convo-prep` — talking points + likely Q&A for the check-in conversation.
 
 ## Guardrails
 - Don't commit generated check-ins or filled config (see `.gitignore`).
