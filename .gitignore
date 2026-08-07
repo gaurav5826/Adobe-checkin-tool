@@ -1,0 +1,16 @@
+# Real personal config — fill locally, never commit
+config/identities-and-sources.md
+config/*.local.md
+
+# Any employer-specific / confidential rubric kept locally
+references/*.confidential.md
+
+# Generated check-ins and build artifacts (contain real evidence)
+output/
+*.pdf
+*.html
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
