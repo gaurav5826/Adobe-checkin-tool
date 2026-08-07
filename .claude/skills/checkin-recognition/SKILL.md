@@ -34,5 +34,5 @@ never invent, and never paraphrase a neutral message into praise.
 ## Guardrails
 - Only real, attributable quotes. Never fabricate, and never inflate a neutral
   message into praise. Read-only — never post or react.
-- Recognition is **supporting evidence** — it belongs in the Evidence sheet, not
-  as a vanity list in the prose answers.
+- Per `config/content-preferences.md`, recognition is **supporting evidence** —
+  it belongs in the Evidence sheet, not as a vanity list in the prose answers.
