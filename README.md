@@ -19,6 +19,7 @@ for you to review and paste yourself.
 ```
 .claude/skills/checkin-helper/SKILL.md    # main workflow: gather -> draft Answers + Evidence
 .claude/skills/checkin-rephrase/SKILL.md  # companion: tighten goal statements (no lookups)
+.claude/skills/checkin-review/SKILL.md    # senior-manager review: score 12 weighted factors, verdict
 scripts/md2pdf.py                         # markdown -> styled HTML -> PDF (headless Chrome; tables + links)
 config/identities-and-sources.example.md  # copy to identities-and-sources.md and fill in
 config/content-preferences.md             # how you want the writing to read
@@ -48,10 +49,14 @@ prerequisites, what it pulls from each, and the query recipes.
 
 ## Usage (each cycle)
 
-In Claude Code: `/checkin-helper` (optionally name the cycle, e.g.
-`/checkin-helper 2026 Mid-year`). Claude will gather evidence for the period,
-draft the Answers and Evidence, and write them to an output folder for you to
-review and paste into the form.
+In Claude Code, the flow is **draft → grade → submit**:
+- `/checkin-helper 2026 Mid-year` — gather evidence, draft the Answers + Evidence
+  into an output folder.
+- `/checkin-review` — grade the draft as a senior manager (12 weighted factors,
+  1-10, with a calibration verdict) before you submit.
+- `/checkin-rephrase` — tighten individual goal statements if needed.
+
+Nothing is submitted automatically; you review and paste into the form yourself.
 
 ## Privacy note
 
