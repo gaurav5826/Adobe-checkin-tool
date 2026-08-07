@@ -33,5 +33,11 @@
 - For at-risk/behind goals, the skill looks for blocker evidence (JIRA
   blockers/comments, Slack threads) to explain what's getting in the way.
 
+## Official check-in guide (optional, LOCAL only — never commit)
+- If your org publishes a check-in guide (often confidential), keep it OUTSIDE
+  this repo or as a gitignored `references/*.local.*`, and put its path here so
+  the skills can read it for the authoritative framing/examples:
+  `guide_path: </path/to/your/check-in-guide.pdf>`
+
 ## Output
 - Where to write drafts: `output/<cycle>/`  (gitignored)

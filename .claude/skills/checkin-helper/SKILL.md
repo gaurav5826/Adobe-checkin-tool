@@ -19,8 +19,11 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    project, Slack channels, repos, hosts), `config/content-preferences.md`,
    `references/performance-principles.md`, and — if present —
    `config/form-templates.md` (the literal current form wording; answer those
-   exact questions). If `identities-and-sources.md` is missing, tell the user to
-   copy the `.example.md` and fill it — never guess.
+   exact questions). If a `guide_path` is set in `identities-and-sources.md`,
+   **read that official check-in guide** — it's the authoritative source for
+   framing, the worked example, and tips (keep it local; never commit it). If
+   `identities-and-sources.md` is missing, tell the user to copy the `.example.md`
+   and fill it — never guess.
 2. **Confirm cycle, window & goal status.** Get the cycle name and date range if
    not given, and each goal's status (on-track / at-risk / behind) — from
    `identities-and-sources.md` or by asking.

@@ -9,7 +9,9 @@ Turns the written Check-in into a plan for the live conversation. Advisory only.
 
 ## Input
 The drafted Answers (`output/<cycle>/answers.md`) or the user's highlights. Read
-`config/content-preferences.md` for tone and altitude.
+`config/content-preferences.md` for tone and altitude. If a `guide_path` is
+configured in `config/identities-and-sources.md`, skim the guide's conversation
+prompts too (keep it local).
 
 ## Produce
 1. **Lead with (3-4 talking points).** The highest-impact things to open with, in

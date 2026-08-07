@@ -30,3 +30,6 @@ naturally; don't force it:
 - For quality/security: scope (how many, which branches) and current status.
 - For behind/in-progress goals: state the blocker plainly — surfacing risk
   clearly is itself good execution, not something to hide.
+- Feedback (yours or peers'): frame as **Situation -> Behavior -> Impact** —
+  specific and observable, not labels. Peer input on what you delivered, a growth
+  area, or a working relationship rounds out the picture.

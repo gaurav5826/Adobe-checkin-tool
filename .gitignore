@@ -3,8 +3,9 @@ config/identities-and-sources.md
 config/form-templates.md
 config/*.local.md
 
-# Any employer-specific / confidential rubric kept locally
+# Any employer-specific / confidential rubric or official guide kept locally
 references/*.confidential.md
+references/*.local.*
 
 # Generated check-ins and build artifacts (contain real evidence)
 output/

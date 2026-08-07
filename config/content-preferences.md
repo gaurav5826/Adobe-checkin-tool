@@ -31,6 +31,9 @@ How the Check-in writing should read. Adjust to taste.
   reaching) and do **not** ask for more cross-team collaboration (can read as
   wanting to leave the project). Frame growth as deepening skills and taking on
   more within the current team, unless the user says otherwise.
+- **Manager feedback (Q3): use Situation-Behavior-Impact.** Name the situation,
+  the observable behavior, and its impact — honest but respectful, with a real
+  example. Same for any peer feedback you request.
 - Scope to the review period the user names.
 
 ## Formatting
