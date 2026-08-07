@@ -17,14 +17,23 @@ for you to review and paste yourself.
 ## What's in here
 
 ```
-.claude/skills/checkin-helper/SKILL.md   # the workflow Claude follows
-scripts/md2pdf.py                        # markdown -> styled HTML -> PDF (headless Chrome)
-config/identities-and-sources.example.md # copy to identities-and-sources.md and fill in
-config/content-preferences.md            # how you want the writing to read
-references/performance-principles.md     # generic IC performance framing
-templates/answers.md                     # narrative template
-templates/evidence.md                    # proof-sheet template
+.claude/skills/checkin-helper/SKILL.md    # main workflow: gather -> draft Answers + Evidence
+.claude/skills/checkin-rephrase/SKILL.md  # companion: tighten goal statements (no lookups)
+scripts/md2pdf.py                         # markdown -> styled HTML -> PDF (headless Chrome; tables + links)
+config/identities-and-sources.example.md  # copy to identities-and-sources.md and fill in
+config/content-preferences.md             # how you want the writing to read
+references/sources-and-connections.md     # prerequisites + what to pull + concrete query recipes
+references/performance-principles.md      # generic IC performance framing
+templates/answers.md                      # narrative template
+templates/evidence.md                     # proof-sheet template
 ```
+
+## Which tools it connects to
+
+`checkin-helper` pulls evidence from whatever is connected — GitHub (`gh`),
+JIRA, Slack, Outlook/SharePoint (Microsoft 365), and Confluence — and skips any
+that aren't. See `references/sources-and-connections.md` for the exact
+prerequisites, what it pulls from each, and the query recipes.
 
 ## Setup (once)
 

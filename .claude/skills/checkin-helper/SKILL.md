@@ -5,54 +5,50 @@ description: Prepare a periodic performance Check-in. Gathers real evidence from
 
 # Check-in Helper
 
-Repo root = two levels up from this file (the dir containing `config/`,
-`templates/`, `scripts/`).
+Repo root = two levels up from this file (dir with `config/`, `templates/`,
+`scripts/`, `references/`). Read `references/sources-and-connections.md` for the
+concrete pull queries and `config/content-preferences.md` for how to write.
 
 ## Steps
 
-1. **Load config.** Read `config/identities-and-sources.md` (accounts,
-   JIRA project, Slack channels, repos, hosts), `config/content-preferences.md`
-   (tone and formatting rules), and `references/performance-principles.md`
-   (framing). If `identities-and-sources.md` is missing, ask the user to copy
-   the `.example.md` and fill it in — do not guess handles.
-2. **Confirm the cycle & window.** Ask for the cycle name (e.g. "2026
-   Mid-year") and the date range to cover, if not given.
-3. **Gather evidence per source that's configured** (skip any left blank):
-   - **GitHub** — `gh search prs --author <handle> --owner <org> --created <range>`
-     across every configured handle and org (people often have more than one
-     account). Categorize into features / fixes / security / tests vs.
-     release & dependency PRs; note counts and the repos touched.
-   - **JIRA** — via the environment's JIRA skill: resolved/closed vs. open in
-     the window, grouped by theme; capture bug count, Critical/Blocker count,
-     security items (delivered vs. in-progress), and any reopened tickets.
-   - **Slack** — search the configured team channels for ownership signals,
-     customer/release context, and where teammates route decisions to the user.
-   - **Outlook/M365** — search for release/testathon coordination and any
-     recognition.
-   - **Confluence** — search configured spaces for docs/pages authored.
-4. **Reframe, don't just list** (apply `content-preferences.md` +
+0. **Check connections.** Run the "Check it's live" probes in
+   `references/sources-and-connections.md` (`gh auth status`, JIRA 1-row search,
+   Slack/M365/Wiki reachable). Announce which sources are available; **skip any
+   that aren't** — don't block on them.
+1. **Load config.** Read `config/identities-and-sources.md` (handles, JIRA
+   project, Slack channels, repos, hosts), `config/content-preferences.md`, and
+   `references/performance-principles.md`. If `identities-and-sources.md` is
+   missing, tell the user to copy the `.example.md` and fill it — never guess.
+2. **Confirm cycle & window** (e.g. "2026 Mid-year", date range) if not given.
+3. **Gather evidence** from each connected source using the recipes in
+   `references/sources-and-connections.md`:
+   - GitHub (every handle × org), JIRA (resolved/open + bug/critical/security/
+     reopened counts), Slack (ownership/customer/recognition), Outlook (release/
+     recognition), SharePoint, Confluence. Search **all** your GitHub handles.
+4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
-   - Lead with **impact/outcomes**, not activity.
-   - Map evidence to the review's framework (e.g. Strategy / Execution /
-     Leadership) only where it fits naturally.
-   - Honesty: mark in-progress work as in-progress; never claim unshipped work
-     as delivered; never invent metrics — if a number isn't in the evidence,
-     leave it out or ask.
-5. **Produce two artifacts** from the templates:
-   - `output/<cycle>/answers.md` — from `templates/answers.md` (narrative;
-     numbers stay OUT of the prose per preferences).
-   - `output/<cycle>/evidence.md` — from `templates/evidence.md` (proof sheet:
-     tables of clickable JIRA/PR links + status; this is where the numbers and
-     receipts live).
-6. **Render** both with `python3 scripts/md2pdf.py <file.md> <fontpx>` (produces
-   `.html`, then use headless Chrome `--print-to-pdf` for the `.pdf`). Keep
-   `.md`, `.html`, `.pdf` in sync whenever content changes.
-7. **Review, don't submit.** Present the drafts. Remind the user: paste the
-   Answers into the form by copying from the rendered `.html` in a browser
-   (rich copy preserves bold + bullets; pasting markdown shows literal `-`/`**`),
-   and attach the Evidence PDF. Never post or submit anything automatically.
+   - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
+     Leadership only where it fits.
+   - Honesty: mark in-progress as in-progress; never claim unshipped work as
+     delivered; never invent numbers.
+   - **Numbers stay in the Evidence sheet, not the prose** (no vanity metrics).
+5. **Produce two artifacts** into `output/<cycle>/`:
+   - `answers.md` (from `templates/answers.md`) — narrative to paste in the form.
+   - `evidence.md` (from `templates/evidence.md`) — proof sheet: tables of
+     clickable JIRA/PR links + status; this is where counts/receipts live.
+6. **Render** with `python3 scripts/md2pdf.py <file.md> <fontpx>` (writes `.html`;
+   then headless Chrome `--print-to-pdf` for `.pdf`). Keep `.md`/`.html`/`.pdf`
+   in sync on every edit.
+7. **Review, don't submit.** Present drafts. Remind: paste the Answers by copying
+   from the rendered `.html` in a browser (rich copy keeps bold + bullets;
+   pasting markdown shows literal `-`/`**`), and attach the Evidence PDF. Never
+   post or submit automatically.
+
+## Companion
+- `checkin-rephrase` — tighten/rewrite goal statements into the form's template
+  (pure text editing, no lookups).
 
 ## Guardrails
-- Do not commit generated check-ins or filled config to git (see `.gitignore`).
+- Don't commit generated check-ins or filled config (see `.gitignore`).
 - Keep any employer-confidential rubric local; reference principles, don't copy
-  confidential documents into this repo.
+  confidential docs into this repo.
