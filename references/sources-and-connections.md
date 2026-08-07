@@ -72,6 +72,13 @@ project=<PROJECT> AND assignee=currentUser() AND statusCategory=Done AND resolut
 project=<PROJECT> AND assignee=currentUser() AND statusCategory!=Done         # open / in-progress (mark honestly)
 project=<PROJECT> AND assignee=currentUser() AND status=Reopened              # rework signal
 ```
+For open security work, **list the ticket keys** (not just a count) so they can be
+named/linked in the Evidence, e.g. the JQL above with `--limit` and read the keys.
+
+## Non-system facts to elicit from the user (drive Impact)
+Not in GitHub/JIRA — ask briefly and fold into the results: **customers** served
+or shipped-to; **adoption/usage**; **delivered ahead of deadline?**; **recognition**
+received; **mentoring/KT** done. Never invent — omit if the user has none.
 No JIRA skill? Use REST: `GET <JIRA_URL>/rest/api/2/search` with the PAT and the same JQL.
 
 ### Slack

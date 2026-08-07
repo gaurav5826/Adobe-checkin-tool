@@ -40,6 +40,13 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    - **For at-risk / behind goals**, also pull **blocker evidence** — JIRA
      blockers/comments, Slack threads describing the holdup — so it can be
      explained factually rather than guessed.
+3b. **Elicit non-system facts (drives Impact — don't skip).** The highest-impact
+   facts usually aren't in GitHub/JIRA. Ask the user briefly for: which
+   **customers** the work served or shipped to; any **adoption/usage** signal;
+   whether it was **delivered ahead of / on deadline**; any **recognition**
+   received; any **mentoring/KT** done. Use these to make impact concrete. Never
+   invent them — omit anything the user doesn't have, and mark `[confirm]` only
+   until they answer.
 4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
    - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
