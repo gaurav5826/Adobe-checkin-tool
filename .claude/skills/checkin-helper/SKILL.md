@@ -17,8 +17,8 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    that aren't** — don't block on them.
 1. **Load config.** Read `config/identities-and-sources.md` (handles, JIRA
    project, Slack channels, repos, hosts), `config/content-preferences.md`,
-   `references/performance-principles.md`, and — if present —
-   `config/form-templates.md` (the literal current form wording; answer those
+   `references/performance-principles.md`, `references/check-in-writing-guide.md`
+   (how to write each answer), and — if present — `config/form-templates.md` (the literal current form wording; answer those
    exact questions). If a `guide_path` is set in `identities-and-sources.md`,
    **read that official check-in guide** — it's the authoritative source for
    framing, the worked example, and tips (keep it local; never commit it). If

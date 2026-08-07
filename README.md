@@ -29,6 +29,7 @@ config/content-preferences.md             # how you want the writing to read
 references/sources-and-connections.md     # prerequisites + what to pull + concrete query recipes
 references/review-checklist.md            # self-review loop (senior-dev + manager passes) before presenting
 references/performance-principles.md      # generic IC performance framing
+references/check-in-writing-guide.md      # generic "how to write a strong check-in" guide
 templates/answers.md                      # narrative template
 templates/evidence.md                     # proof-sheet template
 ```
