@@ -26,6 +26,8 @@ Paste each section into its form box. Attach the Evidence PDF separately.
 
 ## Q1 — Results delivered toward goals so far
 
+*For any goal you're behind on, state plainly what's getting in the way (with evidence) — the form asks for this.*
+
 **Goal 1 — <title>**
 
 <One or two sentences leading with impact — customer need, shipped, adopted,

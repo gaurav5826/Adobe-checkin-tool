@@ -1,5 +1,6 @@
 # Real personal config — fill locally, never commit
 config/identities-and-sources.md
+config/form-templates.md
 config/*.local.md
 
 # Any employer-specific / confidential rubric kept locally

@@ -16,10 +16,14 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    Slack/M365/Wiki reachable). Announce which sources are available; **skip any
    that aren't** — don't block on them.
 1. **Load config.** Read `config/identities-and-sources.md` (handles, JIRA
-   project, Slack channels, repos, hosts), `config/content-preferences.md`, and
-   `references/performance-principles.md`. If `identities-and-sources.md` is
-   missing, tell the user to copy the `.example.md` and fill it — never guess.
-2. **Confirm cycle & window** (e.g. "2026 Mid-year", date range) if not given.
+   project, Slack channels, repos, hosts), `config/content-preferences.md`,
+   `references/performance-principles.md`, and — if present —
+   `config/form-templates.md` (the literal current form wording; answer those
+   exact questions). If `identities-and-sources.md` is missing, tell the user to
+   copy the `.example.md` and fill it — never guess.
+2. **Confirm cycle, window & goal status.** Get the cycle name and date range if
+   not given, and each goal's status (on-track / at-risk / behind) — from
+   `identities-and-sources.md` or by asking.
 3. **Gather evidence** from each connected source using the recipes in
    `references/sources-and-connections.md`. First **resolve identities** (don't
    hardcode). Then:
@@ -30,12 +34,18 @@ concrete pull queries and `config/content-preferences.md` for how to write.
      delivered vs. in-progress, reopened).
    - Slack (ownership/customer/recognition), Outlook (release/recognition, noise
      filtered), SharePoint, Confluence.
+   - **For at-risk / behind goals**, also pull **blocker evidence** — JIRA
+     blockers/comments, Slack threads describing the holdup — so it can be
+     explained factually rather than guessed.
 4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
    - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
      Leadership only where it fits.
    - Honesty: mark in-progress as in-progress; never claim unshipped work as
      delivered; never invent numbers.
+   - **Behind/at-risk goals:** state plainly what's getting in the way, using the
+     blocker evidence — the form asks for this, and surfacing risk clearly is
+     good execution, not something to hide.
    - **Numbers stay in the Evidence sheet, not the prose** (no vanity metrics).
 5. **Produce two artifacts** into `output/<cycle>/`:
    - `answers.md` (from `templates/answers.md`) — narrative to paste in the form.

@@ -24,6 +24,8 @@ How the Check-in writing should read. Adjust to taste.
   achievements — fold them into quality/release work.
 - **Honesty on status.** Mark in-progress work as in-progress; don't claim
   unshipped work as delivered.
+- **Behind/at-risk goals:** state the blocker plainly with evidence (the form
+  asks for it). Surfacing risk is good execution, not a weakness to hide.
 - **Right altitude for the level.** Keep manager-feedback (Q3) asks appropriate to
   seniority. For early-career, do **not** ask to lead or mentor others (reads as
   reaching) and do **not** ask for more cross-team collaboration (can read as

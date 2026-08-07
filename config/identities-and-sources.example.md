@@ -14,6 +14,7 @@
 - Project key: `<PROJECT>`
 - Base URL: `<https://jira.example.com/browse/>`
 - Assignee identity: `currentUser()` (or `<jira-username>`)
+- Saved filters / epics (optional, map to goals): `<saved-filter-id>`, `<EPIC-1 = goal A>`, `<EPIC-2 = goal B>`
 
 ## Slack
 - Team channel(s): `<#your-team-channel>`
@@ -21,9 +22,16 @@
 
 ## Outlook / M365
 - Search terms: `<"release", "testathon", your-project-name>`
+- Key senders (recognition/priorities): `<manager@company>`, `<skip-level@company>`
 
 ## Confluence / Wiki
 - Space(s): `<SPACE-KEY or URL>`
+
+## Goal status (optional — drives evidence gathering)
+- For each goal, note its status so the skill knows where to dig:
+  `Goal A = on-track` · `Goal B = at-risk` · `Goal C = behind`
+- For at-risk/behind goals, the skill looks for blocker evidence (JIRA
+  blockers/comments, Slack threads) to explain what's getting in the way.
 
 ## Output
 - Where to write drafts: `output/<cycle>/`  (gitignored)

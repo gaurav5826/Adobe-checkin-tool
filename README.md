@@ -22,6 +22,7 @@ for you to review and paste yourself.
 .claude/skills/checkin-review/SKILL.md    # senior-manager review: score 12 weighted factors, verdict
 scripts/md2pdf.py                         # markdown -> styled HTML -> PDF (headless Chrome; tables + links)
 config/identities-and-sources.example.md  # copy to identities-and-sources.md and fill in
+config/form-templates.example.md          # copy to form-templates.md; paste the literal form wording
 config/content-preferences.md             # how you want the writing to read
 references/sources-and-connections.md     # prerequisites + what to pull + concrete query recipes
 references/review-checklist.md            # self-review loop (senior-dev + manager passes) before presenting
@@ -42,8 +43,10 @@ prerequisites, what it pulls from each, and the query recipes.
 1. Copy `config/identities-and-sources.example.md` to
    `config/identities-and-sources.md` and fill in your handles, project keys,
    channels, and repos. **This file is gitignored — it never gets committed.**
-2. Skim `config/content-preferences.md` and adjust to taste.
-3. Make sure the skills are discoverable: either run Claude Code from this repo,
+2. Copy `config/form-templates.example.md` to `config/form-templates.md` and
+   paste the literal wording of your Check-in form (also gitignored).
+3. Skim `config/content-preferences.md` and adjust to taste.
+4. Make sure the skills are discoverable: either run Claude Code from this repo,
    or symlink all three into your user skills dir:
    ```
    mkdir -p ~/.claude/skills
