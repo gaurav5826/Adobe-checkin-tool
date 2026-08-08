@@ -23,7 +23,7 @@ pause to ask). If it must run detached, gather what it can and leave `[confirm]`
 markers instead of blocking.
 
 ## Quick Overview
-> **Inputs:** cycle name (e.g. "2026 Mid-year") · filled `config/` · connected tools
+> **Inputs:** cycle name `<Year> <Month>` (e.g. "2026 August") · the gather time period (start–end dates) · filled `config/` · connected tools
 > **Outputs:** `output/<cycle>/answers.{md,pdf}` + `evidence.{md,pdf}` + `evidence-pool.md` · a scorecard
 > **Related:** run `checkin-convo-prep` before the manager conversation
 

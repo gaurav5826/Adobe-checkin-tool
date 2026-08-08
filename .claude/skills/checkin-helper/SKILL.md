@@ -31,9 +31,13 @@ concrete pull queries and `config/content-preferences.md` for how to write.
 
 ### B — Gather
 
-4. **Confirm cycle, window & goal status.** Cycle name + date range (default:
-   since the prior cycle's end), and each goal's status (on-track / at-risk /
-   behind) — from config or by asking.
+4. **Confirm cycle name, the gather time period, and goal status** (ask these up
+   front):
+   - **Cycle name** — format `<Year> <Month>` (e.g. `2026 August`).
+   - **Time period** — the explicit **start and end dates to gather work from**
+     (PRs / tickets / messages). Default: since the prior cycle's end. **All
+     evidence gathering is scoped to this window** — confirm it before gathering.
+   - **Goal status** — each goal on-track / at-risk / behind (drives blocker digging).
 5. **Gather evidence** via the recipes; **resolve identities first** (don't
    hardcode). GitHub multi-pass (opened / merged-in-window / open-updated /
    closed-unmerged / reviews-given) for **every** handle × org incl. any

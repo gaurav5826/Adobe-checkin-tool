@@ -94,7 +94,7 @@ Two optional agents run the skills in order, so you don't invoke them one by one
 - **`checkin-create-agent`** — the full pipeline (`checkin-helper` -> `checkin-recognition`
   -> the `checkin-review` <-> `checkin-rephrase` loop) -> review-ready drafts. Run
   **interactively** (it asks the ~5 non-system facts up front, then runs). e.g.
-  "prepare my 2026 Year-end check-in".
+  "prepare my 2026 August check-in" (cycle name = `<Year> <Month>`).
 - **`checkin-polish-agent`** — just the grade-and-tighten loop on an existing draft.
   e.g. "polish my check-in". Needs no input; safe to run in the background.
 
