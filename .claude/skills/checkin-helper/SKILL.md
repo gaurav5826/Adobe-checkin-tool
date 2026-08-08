@@ -47,6 +47,10 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    received; any **mentoring/KT** done. Use these to make impact concrete. Never
    invent them — omit anything the user doesn't have, and mark `[confirm]` only
    until they answer.
+3c. **Save the complete evidence pool (never dropped).** Record **every** gathered
+   item into `output/<cycle>/evidence-pool.md` — grouped by theme, with counts,
+   links, and status. This is the cycle's **source of truth**; nothing is trimmed
+   from it. Everything downstream is **curated from** the pool, not instead of it.
 4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
    - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
@@ -57,7 +61,8 @@ concrete pull queries and `config/content-preferences.md` for how to write.
      blocker evidence — the form asks for this, and surfacing risk clearly is
      good execution, not something to hide.
    - **Numbers stay in the Evidence sheet, not the prose** (no vanity metrics).
-5. **Produce two artifacts** into `output/<cycle>/`:
+5. **Produce two artifacts by curating from the pool** (promote the strongest —
+   never delete from the pool) into `output/<cycle>/`:
    - `answers.md` (from `templates/answers.md`) — narrative to paste in the form.
    - `evidence.md` (from `templates/evidence.md`) — proof sheet: tables of
      clickable JIRA/PR links + status; this is where counts/receipts live.
@@ -83,6 +88,10 @@ concrete pull queries and `config/content-preferences.md` for how to write.
 - `checkin-convo-prep` — talking points + likely Q&A for the check-in conversation.
 
 ## Guardrails
+- **Curate the narrative, never the pool.** Selection is reversible; deletion
+  isn't. In the `checkin-review` <-> `checkin-rephrase` loop, improve by swapping
+  in stronger items from `evidence-pool.md`, not only by cutting — nothing gathered
+  is ever lost, so any demoted item can be re-promoted later.
 - Don't commit generated check-ins or filled config (see `.gitignore`).
 - Keep any employer-confidential rubric local; reference principles, don't copy
   confidential docs into this repo.

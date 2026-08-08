@@ -83,7 +83,11 @@ SETUP (once) -> checkin-helper -> checkin-recognition -> [ checkin-review <-> ch
 ```
 
 1. **Setup (once)** — fill `config/identities-and-sources.md` + `config/form-templates.md`; symlink the skills. Skip on later cycles.
-2. **`/checkin-helper <cycle>` — draft.** Gathers evidence, asks the ~5 non-system facts (customers, adoption, ahead-of-deadline, recognition, KT), writes `output/<cycle>/answers.md` + `evidence.md` (+ PDFs).
+2. **`/checkin-helper <cycle>` — draft.** Gathers evidence into a complete
+   `output/<cycle>/evidence-pool.md` (**every** item, nothing dropped — the source
+   of truth), asks the ~5 non-system facts (customers, adoption, ahead-of-deadline,
+   recognition, KT), then writes `answers.md` + `evidence.md` (+ PDFs) **curated
+   from** the pool. Curate the narrative, never the pool.
 3. **`/checkin-recognition` — enrich.** Adds a Recognition block to the Evidence. Run before review so it gets graded.
 4. **`/checkin-review` <-> `/checkin-rephrase` — grade, in a loop.** Review scores the draft and tags fixes `[wording]` vs `[real work]`. For each `[wording]` fix, rephrase that section and re-run review. Stop when the score plateaus / only `[real work]` gaps remain (those are for next cycle, not the doc).
 5. **Submit.** Paste Answers by rich-copying from the `.html` (keeps bold + bullets); attach the Evidence PDF.

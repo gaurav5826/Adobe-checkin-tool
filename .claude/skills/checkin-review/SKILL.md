@@ -53,7 +53,7 @@ to verify claims. If nothing is provided, ask for the Answers (or point to
 3. **Special vs. average** — one honest paragraph: genuinely notable, or solid-but-routine? Name what's special (or say plainly that it's standard).
 4. **Promo-readiness** — signals toward the next level: what's present, what's missing.
 5. **Red flags** — anything that would be picked apart in calibration (or "none").
-6. **Top improvements** — the highest-leverage fixes, each tagged **[wording]** (fixable in the doc now) or **[real work]** (belongs to the next cycle).
+6. **Top improvements** — the highest-leverage fixes, each tagged **[wording]** (fixable in the doc now — including **swapping in a stronger example from `evidence-pool.md`**, not just rewording) or **[real work]** (belongs to the next cycle).
 
 ## Guardrails
 - Don't flatter. 9-10 is rare and must be earned by evidence in the answers.

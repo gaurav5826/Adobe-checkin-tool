@@ -31,6 +31,8 @@ form's structure and tone. Wording only — no data gathering.
   achievements — fold them into quality/release work.
 - **Honesty** — don't let a rephrase turn in-progress work into "delivered."
 - **Tone** — soft, professional, concise; not inflated.
+- **Weak section?** You may **swap in a stronger example from
+  `output/<cycle>/evidence-pool.md`** rather than only rewording — never invent.
 
 ## Section-specific
 - **Q3 (manager feedback):** keep asks **level-appropriate**. For early-career,
