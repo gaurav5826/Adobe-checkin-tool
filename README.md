@@ -17,6 +17,8 @@ for you to review and paste yourself.
 ## What's in here
 
 ```
+.claude/agents/checkin-create-agent/        # orchestrator agent: runs the whole pipeline in order
+.claude/agents/checkin-polish-agent/        # agent: the review<->rephrase grade-and-tighten loop
 .claude/skills/checkin-helper/SKILL.md      # main workflow: gather -> draft Answers + Evidence
 .claude/skills/checkin-review/SKILL.md      # senior-manager review: score 12 weighted factors, verdict
 .claude/skills/checkin-rephrase/SKILL.md    # tighten a goal or any answer (no lookups)
@@ -56,6 +58,10 @@ prerequisites, what it pulls from each, and the query recipes.
    for s in checkin-helper checkin-review checkin-rephrase checkin-recognition checkin-convo-prep; do
      ln -sfn "$PWD/.claude/skills/$s" ~/.claude/skills/$s
    done
+   mkdir -p ~/.claude/agents
+   for a in checkin-create-agent checkin-polish-agent; do
+     ln -sfn "$PWD/.claude/agents/$a" ~/.claude/agents/$a
+   done
    ```
 
 ## Usage — workflow (each cycle)
@@ -81,6 +87,18 @@ SETUP (once) -> checkin-helper -> checkin-recognition -> [ checkin-review <-> ch
 6. **`/checkin-convo-prep` — rehearse** before the manager conversation.
 
 Mental model: *draft -> enrich -> (grade <-> tighten)^n -> submit -> rehearse.* Only step 4 loops.
+
+## Agents (one-command orchestration)
+
+Two optional agents run the skills in order, so you don't invoke them one by one:
+- **`checkin-create-agent`** — the full pipeline (`checkin-helper` -> `checkin-recognition`
+  -> the `checkin-review` <-> `checkin-rephrase` loop) -> review-ready drafts. Run
+  **interactively** (it asks the ~5 non-system facts up front, then runs). e.g.
+  "prepare my 2026 Year-end check-in".
+- **`checkin-polish-agent`** — just the grade-and-tighten loop on an existing draft.
+  e.g. "polish my check-in". Needs no input; safe to run in the background.
+
+Both call the skills above; nothing is submitted automatically.
 
 ## Privacy note
 
