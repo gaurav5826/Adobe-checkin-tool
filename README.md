@@ -83,9 +83,11 @@ SETUP (once) -> checkin-helper -> checkin-recognition -> [ checkin-review <-> ch
 ```
 
 1. **Setup (once)** — fill `config/identities-and-sources.md` + `config/form-templates.md`; symlink the skills. Skip on later cycles.
-2. **`/checkin-helper <cycle>` — draft.** Gathers evidence into a complete
-   `output/<cycle>/evidence-pool.md` (**every** item, nothing dropped — the source
-   of truth), asks the ~5 non-system facts (customers, adoption, ahead-of-deadline,
+2. **`/checkin-helper <cycle>` — draft.** Builds on the prior cycle (rolls goals
+   forward, gathers only what's new, enables trajectory), then gathers evidence
+   into a complete `output/<cycle>/evidence-pool.md` — organized as **units of
+   work** (accomplishments, not raw PRs), nothing dropped, the source of truth.
+   Asks the ~5 non-system facts (customers, adoption, ahead-of-deadline,
    recognition, KT), then writes `answers.md` + `evidence.md` (+ PDFs) **curated
    from** the pool. Curate the narrative, never the pool.
 3. **`/checkin-recognition` — enrich.** Adds a Recognition block to the Evidence. Run before review so it gets graded.

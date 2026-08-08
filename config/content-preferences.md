@@ -37,6 +37,7 @@ How the Check-in writing should read. Adjust to taste.
 - Scope to the review period the user names.
 
 ## Formatting
+- Frame results as **accomplishments (units of work)**, not raw PR/commit counts.
 - Organize "results" by goal.
 - Bold the goal/section headers; use real bullet lists.
 - Keep numbers/IDs out of prose; they belong in the Evidence tables.

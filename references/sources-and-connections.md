@@ -16,6 +16,12 @@ that isn't connected**.
 | Outlook / SharePoint | Microsoft 365 MCP | `get_me` |
 | Confluence | Wiki MCP (`search_wiki_content`) | small search |
 
+## Cross-cycle (continuity)
+On a repeat cycle, read the prior `output/<prev-cycle>/evidence-pool.md` and
+`answers.md`: **gather only items dated after the prior cycle's end** (don't
+re-fetch old work), **carry goals forward** (update status), and enable
+**trajectory** statements ("committed to X last cycle -> delivered Y").
+
 ## Resolve identity first (never hardcode)
 - **GitHub:** `gh api user --jq '.login'`. Search **every** handle you use — handles
   can differ per platform or per account (e.g. a company suffix, or a separate
@@ -58,6 +64,10 @@ Then: categorize (feature/fix/security/test vs. release/deps), group by repo,
 count reverts (title contains "revert"). Repos on an **enterprise GitHub host**
 won't appear in `gh` (github.com) — pull those via the corp GitHub MCP too, and
 de-dupe by title/URL.
+**Canonicalize into units of work:** group PRs by JIRA ticket (extract the key
+from the title) or logical cluster — each unit is one accomplishment. Merge
+6.5/LTS backport pairs and closed-then-re-landed PRs into a single unit. Count and
+present **units**, not raw PRs (100 PRs may be ~30 units).
 
 > Large PR dumps can overflow a tool response — process the saved JSON with a
 > small `python3` script (or a subagent) instead of reading it inline.

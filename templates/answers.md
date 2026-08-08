@@ -7,6 +7,8 @@ Paste each section into its form box. Attach the Evidence PDF separately.
 
 ## Goals — Top 3
 
+*Carry forward from last cycle where relevant; update status.*
+
 **Goal 1 — <short title>**
 - **Goal:** <what you'll own / achieve>
 - **Success metrics:** <how success is measured>
@@ -55,6 +57,8 @@ ahead of deadline. Then the headline items as end-to-end ownership.>
 
 <2–3 short paragraphs: how your scope widened, new skills, changed ways of
 working (tradeoffs, AI, collaboration). End with honest growth areas.>
+
+*(Where a goal continues from last cycle, note the trajectory: what you committed to -> what you delivered.)*
 
 ---
 

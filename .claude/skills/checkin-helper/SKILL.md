@@ -24,9 +24,15 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    framing, the worked example, and tips (keep it local; never commit it). If
    `identities-and-sources.md` is missing, tell the user to copy the `.example.md`
    and fill it — never guess.
+1b. **Load prior cycle (continuity).** Find the most recent existing
+   `output/<previous-cycle>/` (`answers.md` + `evidence-pool.md`). Use it to: roll
+   the **goals forward** (carry them, update status); enable **trajectory** ("last
+   cycle I committed to X -> here's what I delivered"); and scope gathering to
+   **what's new since that cycle's end** (don't re-fetch prior work). If none
+   exists, this is the first cycle.
 2. **Confirm cycle, window & goal status.** Get the cycle name and date range if
-   not given, and each goal's status (on-track / at-risk / behind) — from
-   `identities-and-sources.md` or by asking.
+   not given (default: since the prior cycle's end), and each goal's status
+   (on-track / at-risk / behind) — from `identities-and-sources.md` or by asking.
 3. **Gather evidence** from each connected source using the recipes in
    `references/sources-and-connections.md`. First **resolve identities** (don't
    hardcode). Then:
@@ -47,10 +53,14 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    received; any **mentoring/KT** done. Use these to make impact concrete. Never
    invent them — omit anything the user doesn't have, and mark `[confirm]` only
    until they answer.
-3c. **Save the complete evidence pool (never dropped).** Record **every** gathered
-   item into `output/<cycle>/evidence-pool.md` — grouped by theme, with counts,
-   links, and status. This is the cycle's **source of truth**; nothing is trimmed
-   from it. Everything downstream is **curated from** the pool, not instead of it.
+3c. **Save the complete evidence pool as UNITS OF WORK (never dropped).** Record
+   **every** gathered item into `output/<cycle>/evidence-pool.md`, organized by
+   **unit of work** — one accomplishment per JIRA ticket / logical cluster, with
+   its PRs, tickets, status, and outcome underneath. **Dedupe** near-duplicate PRs
+   and 6.5/LTS backport pairs, and collapse closed-then-reopened/re-landed PRs into
+   the one unit. Report the count of **units (accomplishments)**, not raw PR volume
+   — 100 PRs may be ~30 units. This is the cycle's **source of truth**; nothing is
+   trimmed. Everything downstream is **curated from** the pool, not instead of it.
 4. **Reframe, don't list** (apply `content-preferences.md` +
    `performance-principles.md`):
    - Lead with **impact/outcomes**, not activity; map to Strategy/Execution/
@@ -60,6 +70,9 @@ concrete pull queries and `config/content-preferences.md` for how to write.
    - **Behind/at-risk goals:** state plainly what's getting in the way, using the
      blocker evidence — the form asks for this, and surfacing risk clearly is
      good execution, not something to hide.
+   - **Trajectory:** where a goal continues from last cycle, show progress against
+     what you committed to ("committed to X -> delivered Y").
+   - **Count accomplishments (units of work), not PR volume.**
    - **Numbers stay in the Evidence sheet, not the prose** (no vanity metrics).
 5. **Produce two artifacts by curating from the pool** (promote the strongest —
    never delete from the pool) into `output/<cycle>/`:
