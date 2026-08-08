@@ -13,31 +13,33 @@ How the Check-in writing should read. Adjust to taste.
 - **Evidence (the attachment):** the receipts — tables of ticket/PR links,
   statuses, and any counts. All granular numbers live here, not in the prose.
 
-## Hard rules
-- **No vanity metrics in the prose.** Never narrate your own PR count
-  ("I merged N PRs") or brag denominators ("only 1 revert", "1 reopened
-  ticket"). Put counts in the Evidence sheet if useful.
-- **No invented numbers.** If a metric isn't in the evidence, omit it or ask.
-- **No internal release numbers/counts in the prose** (e.g. version numbers,
-  "shipped N releases"). Say "took part in and owned various releases."
-- **Don't call out routine ceremonies** (testathon, standups, scrum) as separate
+## Rules
+
+**Numbers & metrics**
+- **No vanity metrics in the prose** — never narrate your own PR count ("I merged
+  N PRs") or brag denominators ("only 1 revert", "1 reopened ticket").
+- **No invented numbers** — if a metric isn't in the evidence, omit it or ask.
+- **No internal release numbers/counts** (version numbers, "shipped N releases") —
+  say "took part in and owned various releases."
+- **Count accomplishments (units of work), not PR/commit volume.**
+
+**Honesty & scope**
+- **Status:** mark in-progress as in-progress; never claim unshipped as delivered.
+- **Behind/at-risk goals:** state the blocker plainly with evidence (the form asks
+  for it) — surfacing risk is good execution, not a weakness to hide.
+- **Don't call out routine ceremonies** (testathon, standups) as separate
   achievements — fold them into quality/release work.
-- **Honesty on status.** Mark in-progress work as in-progress; don't claim
-  unshipped work as delivered.
-- **Behind/at-risk goals:** state the blocker plainly with evidence (the form
-  asks for it). Surfacing risk is good execution, not a weakness to hide.
-- **Right altitude for the level.** Keep manager-feedback (Q3) asks appropriate to
-  seniority. For early-career, do **not** ask to lead or mentor others (reads as
-  reaching) and do **not** ask for more cross-team collaboration (can read as
-  wanting to leave the project). Frame growth as deepening skills and taking on
-  more within the current team, unless the user says otherwise.
-- **Manager feedback (Q3): use Situation-Behavior-Impact.** Name the situation,
-  the observable behavior, and its impact — honest but respectful, with a real
-  example. Same for any peer feedback you request.
-- Scope to the review period the user names.
+- **Scope** to the review period the user names.
+
+**Manager feedback (Q3)**
+- **Right altitude:** keep asks appropriate to seniority. Early-career: do **not**
+  ask to lead or mentor others (reads as reaching), and do **not** ask for more
+  cross-team collaboration (reads as wanting to leave the project). Frame growth as
+  deepening skills within the current team, unless the user says otherwise.
+- **Use Situation-Behavior-Impact** — name the situation, the observable behavior,
+  and its impact, with a real example. Same for any peer feedback you request.
 
 ## Formatting
-- Frame results as **accomplishments (units of work)**, not raw PR/commit counts.
 - Organize "results" by goal.
 - Bold the goal/section headers; use real bullet lists.
-- Keep numbers/IDs out of prose; they belong in the Evidence tables.
+- Keep numbers/IDs out of the prose; they belong in the Evidence tables.

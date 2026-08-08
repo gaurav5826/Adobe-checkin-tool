@@ -84,11 +84,6 @@ project=<PROJECT> AND assignee=currentUser() AND status=Reopened              # 
 ```
 For open security work, **list the ticket keys** (not just a count) so they can be
 named/linked in the Evidence, e.g. the JQL above with `--limit` and read the keys.
-
-## Non-system facts to elicit from the user (drive Impact)
-Not in GitHub/JIRA — ask briefly and fold into the results: **customers** served
-or shipped-to; **adoption/usage**; **delivered ahead of deadline?**; **recognition**
-received; **mentoring/KT** done. Never invent — omit if the user has none.
 No JIRA skill? Use REST: `GET <JIRA_URL>/rest/api/2/search` with the PAT and the same JQL.
 
 ### Slack
@@ -103,6 +98,11 @@ keep unread/important/flagged. Target recognition + release coordination.
 ### SharePoint / Confluence
 `sharepoint_search query="<team/project>"` (optional `author=<you>`);
 `search_wiki_content` text search or CQL `creator = <you> AND created >= "<START>"`.
+
+## Non-system facts to elicit from the user (drive Impact)
+Not in GitHub/JIRA — ask briefly and fold into the results: **customers** served
+or shipped-to; **adoption/usage**; **delivered ahead of deadline?**; **recognition**
+received; **mentoring/KT** done. Never invent — omit if the user has none.
 
 ## Metrics to compute (for the Evidence snapshot)
 issues resolved · bugs · high-priority delivered · security delivered vs. in-progress ·

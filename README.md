@@ -50,7 +50,7 @@ prerequisites, what it pulls from each, and the query recipes.
    paste the literal wording of your Check-in form (also gitignored).
 3. Skim `config/content-preferences.md` and adjust to taste.
 4. Make sure the skills are discoverable: either run Claude Code from this repo,
-   or symlink all three into your user skills dir:
+   or symlink all five into your user skills dir:
    ```
    mkdir -p ~/.claude/skills
    for s in checkin-helper checkin-review checkin-rephrase checkin-recognition checkin-convo-prep; do
@@ -58,24 +58,9 @@ prerequisites, what it pulls from each, and the query recipes.
    done
    ```
 
-## Usage (each cycle)
-
-In Claude Code, the flow is **draft → grade → submit**:
-- `/checkin-helper 2026 Mid-year` — gather evidence, draft the Answers + Evidence
-  into an output folder.
-- `/checkin-review` — grade the draft as a senior manager (12 weighted factors,
-  1-10, with a calibration verdict) before you submit.
-- `/checkin-rephrase` — tighten a goal or any answer if needed.
-
-Supporting skills:
-- `/checkin-recognition` — collect kudos/praise from Slack, email, and PR comments
-  into a Recognition block for the Evidence.
-- `/checkin-convo-prep` — talking points + likely Q&A to prep for the check-in
-  conversation with your manager.
+## Usage — workflow (each cycle)
 
 Nothing is submitted automatically; you review and paste into the form yourself.
-
-## Workflow (recommended order)
 
 ```
 SETUP (once) -> checkin-helper -> checkin-recognition -> [ checkin-review <-> checkin-rephrase ] -> SUBMIT -> checkin-convo-prep
